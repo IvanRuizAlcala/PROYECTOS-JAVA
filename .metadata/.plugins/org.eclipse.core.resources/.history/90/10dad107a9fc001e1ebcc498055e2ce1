@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+
+public interface InterfaceFileCreatorApp {
+	public void AbrirConexion();
+
+	public ArrayList<String> gestionarArchivo();
+		
+	
+	public void incluirEnFichero( ArrayList<String> frases) {
+		for (int i = 0; i < frases.size(); i++) {
+			bufferEntrada.println(frases.get(i));
+		}
+		System.out.println(" frases guardadas correctamente");
+	}
+	public void cerrarConexion() {
+		bufferEntrada.close();
+		System.out.println(" archivo cerrado");
+	}
+}

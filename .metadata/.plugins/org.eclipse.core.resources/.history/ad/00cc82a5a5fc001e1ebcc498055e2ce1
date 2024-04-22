@@ -1,0 +1,89 @@
+package Class;
+
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class FileCreator {
+private String nombreArchivo;
+
+public FileCreator(String nombreArchivo) {
+	super();
+	this.nombreArchivo = nombreArchivo;
+}
+
+/**
+ * @return the nombreArchivo
+ */
+public String getNombreArchivo() {
+	return nombreArchivo;
+}
+
+/**
+ * @param nombreArchivo the nombreArchivo to set
+ */
+public void setNombreArchivo(String nombreArchivo) {
+	this.nombreArchivo = nombreArchivo;
+}
+
+@Override
+public String toString() {
+	return "FileCreator [nombreArchivo=" + nombreArchivo + "]";
+}
+public void AbrirConexión() {
+	PrintWriter bufferEntrada;
+	try {
+		bufferEntrada = new PrintWriter(new BufferedWriter(new FileWriter(nombreArchivo,true)));
+	} catch (FileNotFoundException e) {
+		e.getMessage();
+	} catch (IOException e) {
+		e.getMessage();
+	}
+}
+
+public void gestionarArchivo() {
+	String aux;
+	int contador =5;
+	int contador2 =0;
+	ArrayList<String> frasesCapturadasPorTeclado = new ArrayList<>();
+	ArrayList<ArrayList<String>> frasesIntroducidasPorUsuario = new ArrayList<ArrayList<String>>();
+	Scanner leer = new Scanner(System.in);
+	System.out.println(" escribe 5 frases: ");
+	for (int i = 0; i < contador; i++) {
+		contador2 = 0;
+		System.out.println(" frase numero " + i +": ");
+		System.out.println(" cada frase puede tener 5 palabras como Máximo, escribelas por favor :");
+		while(contador2<5) {
+			aux = leer.nextLine();
+			if(aux.matches(".*\\s.*")) {
+				if(Character.isWhitespace(aux.charAt(0))) {
+					contador2=5;
+				}else {
+					String [] partido = aux.split("\\s");
+					for(String agregar : partido) {
+						if(agregar!="\\s") {
+							frasesCapturadasPorTeclado.add(agregar);
+							
+						}
+					}
+				}
+			}else {
+				
+					frasesCapturadasPorTeclado.add(aux);
+					
+				}
+			}
+			
+		}
+		frasesIntroducidasPorUsuario.add(frasesCapturadasPorTeclado);
+		
+	for (ArrayList<String> arrayList : frasesIntroducidasPorUsuario) {
+		System.out.println(arrayList);
+		
+	}
+}
+}

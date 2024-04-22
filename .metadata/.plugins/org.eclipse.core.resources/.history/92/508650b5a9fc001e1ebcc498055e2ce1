@@ -1,0 +1,29 @@
+package App;
+
+import java.util.ArrayList;
+
+public interface InterfaceFileCreatorApp {
+
+	/*
+	 * abrir conexion para poder abrir el nuevo archivo
+	 */
+	public void AbrirConexion();
+
+	/*
+	 * metodo para crear frases
+	 */
+	public ArrayList<String> gestionarArchivo();
+
+	/*
+	 * metodo para incluir las frases resultantes de gestionarArchivo en el txt
+	 * 
+	 * @param arraylist de frases resultantes de gestionar Archivo
+	 */
+	public void incluirEnFichero(ArrayList<String> frases);
+
+	/*
+	 * cerrar la conexion con el archivo
+	 */
+	public void cerrarConexion();
+
+}

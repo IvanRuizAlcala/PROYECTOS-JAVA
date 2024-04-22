@@ -1,0 +1,11 @@
+package ejercicio_1;
+
+public interface interfazMeteo {
+
+		/*
+		 * Recibe un objeto de la clase datosMeteo y lo añade al arraylist
+		 */
+		public void anadirDatos() ;
+		
+		
+}

@@ -1,0 +1,8 @@
+package Class;
+
+public class personas {
+ String nombre;
+ String primerApellido;
+ String segundoApellido;
+ 
+}

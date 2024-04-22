@@ -1,0 +1,12 @@
+package App;
+
+import Class.FileCreator;
+
+public class App {
+
+	public static void main(String[] args) {
+		FileCreator filecreator = new FileCreator("hola");
+		filecreator.gestionarArchivo();
+	}
+
+}

@@ -1,0 +1,12 @@
+
+public class App {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//DATOS
+		Cliente cliente1 = new Cliente("455559223H", "Ivan", 672283229);
+		Cliente cliente2 = new Cliente("400000000S", "Dario", 613454545);
+		
+	}
+
+}

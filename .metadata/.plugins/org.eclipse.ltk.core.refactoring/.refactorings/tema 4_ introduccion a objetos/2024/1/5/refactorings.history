@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Menu.java&apos; to &apos;tema 4_ introduccion a objetos/src/Ejercicio_10&apos;&#x0D;&#x0A;- Original project: &apos;tema 4_ introduccion a objetos&apos;&#x0D;&#x0A;- Destination element: &apos;tema 4_ introduccion a objetos/src/Ejercicio_10&apos;&#x0D;&#x0A;- Original element: &apos;ejercicio_7.Menu.java&apos;" description="Copy compilation unit" destination="/src&lt;Ejercicio_10" element1="/src&lt;ejercicio_7{Menu.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1706520729520" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,43 @@
+package ejercicio_1;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
+
+public class GestionDatosMeteo implements interfazMeteo {
+	ArrayList<datosMeteo> gestionarDatos = new ArrayList<>();
+	@Override
+	public void anadirDatos() {
+		Scanner leer = new Scanner(System.in);
+		Random aleatorio = new Random();
+		double tempMinimo = aleatorio.nextInt(10);
+		double tempMaximo = aleatorio.nextInt(100) + 20;
+		double humedadMinimo = aleatorio.nextInt(10);
+		double humedadMaximo = aleatorio.nextInt(100) + 20;
+		double precipitaciones = aleatorio.nextInt(1000);
+		System.out.println(" vamos a crear un dato:");
+		datosMeteo dato1 = new datosMeteo(LocalDate.now(), tempMaximo, tempMinimo, humedadMaximo, humedadMinimo,
+				precipitaciones);
+
+	}
+
+	@Override
+	public double mediaTempMax() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double mediaTempMax(int anno, int mes) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void numeroRegistros() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

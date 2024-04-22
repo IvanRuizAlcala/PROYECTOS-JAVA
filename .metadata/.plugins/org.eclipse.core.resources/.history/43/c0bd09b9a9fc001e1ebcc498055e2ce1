@@ -1,0 +1,36 @@
+package App;
+
+import java.util.ArrayList;
+
+public class App implements InterfaceFileCreatorApp {
+
+	@Override
+	public void AbrirConexion() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public ArrayList<String> gestionarArchivo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void incluirEnFichero(ArrayList<String> frases) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void cerrarConexion() {
+		// TODO Auto-generated method stub
+
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

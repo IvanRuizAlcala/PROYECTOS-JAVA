@@ -1,0 +1,29 @@
+package PROCESO_REPETITIVO_CONSOLA_2;
+
+import java.util.Scanner;
+
+public class EJERCICIO5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//DATOS
+		int num1=0;
+		int raizcuadrada=0;
+		int i=0;
+		int num2=0;
+		Scanner leer = new Scanner(System.in);
+		//ALGORITMO
+		
+		System.out.println("dime un numero");
+		num1=leer.nextInt();
+		
+	for (i=1;i!=num1;i++) {
+		num2=i*i;
+		if (num2==num1) {
+			raizcuadrada=i;
+			System.out.println(raizcuadrada);
+	}
+		
+	}
+	}
+}

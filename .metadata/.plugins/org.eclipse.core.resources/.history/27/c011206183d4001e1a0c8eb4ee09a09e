@@ -1,0 +1,14 @@
+package ejercicio_1;
+
+import java.time.LocalDate;
+
+public class datosMeteo {
+	private LocalDate fecha;
+	private double temperaturaMinima;
+	private double temperaturaMaxima;
+	private double humedadMaxima;
+	private double humedadMinima;
+	private double precipitaciones;
+	
+
+}

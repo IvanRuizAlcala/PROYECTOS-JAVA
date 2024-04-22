@@ -1,0 +1,108 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class EJERCICIO1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> lineasGuardadas = new ArrayList<String>();
+		ArrayList<String> misLineas =  new ArrayList<String>();
+		BufferedReader bufferEntrada = null;
+		int key = 0;
+		Scanner leer = new Scanner(System.in);
+		try {
+			bufferEntrada = new BufferedReader(new FileReader("quijote.txt"));
+			String linea = " ";
+			while ((linea = bufferEntrada.readLine())!=null) {
+				misLineas.add(linea);
+			}
+			do {
+			System.out.println(" dime la opcion que quiere elegir");
+			System.out.println("Opcion 1 : texto completo");
+			System.out.println("Opcion 2 : lineas pares");
+			System.out.println("Opcion 3 : primer y ultima linea");
+			key = leer.nextInt();
+			switch (key) {
+			case 1:{
+				for (String string : misLineas) {
+				System.out.println(string);
+			}
+			}
+				break;
+			case 2:{
+				int contador = 0;
+				for (String string : misLineas) {		
+					if(contador%2==0){
+						System.out.println(string);
+					}
+					contador++;
+				}
+			}
+				break;
+			case 3:{
+				int primeraPosicion = 0;
+				int UltimaPosicion=misLineas.size();
+				String guardar = misLineas.get(primeraPosicion);
+				lineasGuardadas.add(guardar);
+				guardar = misLineas.get(UltimaPosicion-1);
+				lineasGuardadas.add(guardar);
+				for (String string : lineasGuardadas) {
+					System.out.println(string);
+				}
+			}
+				break;
+			default:{
+				System.out.println(" la opcion no es valida");
+			}
+				break;
+			}
+			}
+			while(key!=0);
+			
+		}catch (FileNotFoundException e) {
+			System.out.println(e.getMessage());
+		} catch (IOException e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+	}finally {
+		try {
+			bufferEntrada.close();
+		} catch (IOException e2) {
+			// TODO: handle exception
+			System.out.println(e2.getMessage());
+		}
+	}
+		
+}
+	public static void crearLibro(ArrayList<String> lineas){
+		FileWriter miArchivo = null;
+		try {
+			miArchivo = new FileWriter("palabras.txt");
+			for (String string : lineas) {
+				miArchivo.write(string);
+			}
+				
+			
+			
+				System.out.println(" caracteres leidos");
+			
+		} catch (IOException e) {
+			System.out.println(e.getMessage());
+		}
+		if(miArchivo!=null) {
+			try {
+				miArchivo.close();
+				System.out.println(" archivo cerrado");
+			} catch (IOException e) {
+				System.out.println(e.getMessage());
+			}
+		
+		}
+		
+	}
+}
