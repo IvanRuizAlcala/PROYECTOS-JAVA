@@ -1,5 +1,0 @@
-package Class;
-
-public class GestionLibros {
-ArrayList<Files> misLibros = new ArrayList<>();
-}
