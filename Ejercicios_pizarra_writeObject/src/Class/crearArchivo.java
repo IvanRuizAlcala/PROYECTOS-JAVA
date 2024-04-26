@@ -18,7 +18,7 @@ public String crear(GestionVehiculos misVehiculos) throws IOException,FileNotFou
 	ObjectOutputStream fsalida=null;
 
 	 fsalida = new ObjectOutputStream(new FileOutputStream(archivo));
-	 for (Vehiculos vehi : misVehiculos) {
+	 for (Vehiculos vehi : misVehiculos .) {
 		 fsalida.writeObject(vehi);
 	 	}	
 	
