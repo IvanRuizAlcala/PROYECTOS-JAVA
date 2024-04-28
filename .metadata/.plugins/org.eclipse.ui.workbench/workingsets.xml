@@ -50,6 +50,7 @@
 <item elementID="=Ejercicio7" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=ejercicioS.daT-1" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 <item elementID="=Ejercicios_pizarra_writeObject" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=ejercicio10_" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1695886069918_2" label="Window Working Set" name="Aggregate for window 1695886069918"/>
 <mruList name="Java Main Sources"/>
