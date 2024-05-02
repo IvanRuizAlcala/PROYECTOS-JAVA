@@ -1,2 +1,0 @@
-eclipse.preferences.version=1
-prefWatchExpressions=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<watchExpressions>\r\n    <expression enabled\="true" text\="base*altura/2"/>\r\n    <expression enabled\="true" text\="contador\=temporal;contador&gt;\=2;contador--"/>\r\n    <expression enabled\="true" text\="\!(numero_uno&gt;0 &amp;&amp; numero_uno&lt;10"/>\r\n</watchExpressions>\r\n

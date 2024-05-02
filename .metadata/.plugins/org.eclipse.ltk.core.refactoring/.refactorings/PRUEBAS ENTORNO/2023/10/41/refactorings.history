@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;PRUEBAS ENTORNO/src/capicua/capicuab (1).java&apos; to &apos;capicuab.java&apos;" description="Rename resource &apos;capicuab (1).java&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/capicua/capicuab (1).java" name="capicuab.java" stamp="1697377950450" updateReferences="true"/>
-</session>
