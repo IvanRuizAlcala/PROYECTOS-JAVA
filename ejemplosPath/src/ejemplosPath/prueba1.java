@@ -18,7 +18,7 @@ public class prueba1 {
 				DirectoryStream<Path> directoryStream = Files.newDirectoryStream(ruta);
 				for (Path path : directoryStream) {
 					if(Files.isDirectory(path)) {
-						System.out.println(" Directorio: " + path);
+						System.out.println(" Directorio: " + path); 
 					}
 						else {
 							System.out.println(" Archivo: "+ path);
