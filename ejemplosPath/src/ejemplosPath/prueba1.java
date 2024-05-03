@@ -21,7 +21,7 @@ public class prueba1 {
 						System.out.println(" Directorio: " + path); 
 					}
 						else {
-							System.out.println(" Archivo: "+ path);
+							System.out.println(" Archivo : "+ path);
 					}
 				}
 			} catch (IOException e) {
