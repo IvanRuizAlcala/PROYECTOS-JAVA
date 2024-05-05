@@ -1,5 +1,6 @@
 package Class;
 
+import java.io.IOException;
 import java.sql.Date;
 import java.util.ArrayList;
 
@@ -19,13 +20,13 @@ public interface GestionProducto {
 	 * @param anno
 	 * @return Devuelve un arrayList con las unidades vendidas de cada producto en ese año.
 	 */
-	public ArrayList<Producto> ventaDeProductosXanno(ArrayList<Producto> productos, String anno);
+	public ArrayList<Integer> ventaDeProductosXanno(ArrayList<Producto> productos, String anno);
 	/**
 	 * Generar fichero de texto con las ventas de un año (de todos los productos). Igual que el anterior pero generando un archivo de texto.
 	 * @param productos
 	 */
 	
-	public void guardarVentasEnFichero(ArrayList<Producto> productos);
+	public void guardarVentasEnFichero(ArrayList<Integer> unidadesProductos,String nombreArchivo) throws IOException;
 
 	public ArrayList<Producto> crearProductos(ArrayList<String> totalProdutos);
 }
