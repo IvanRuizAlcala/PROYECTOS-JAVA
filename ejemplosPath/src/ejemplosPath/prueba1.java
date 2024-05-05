@@ -1,5 +1,6 @@
 package ejemplosPath;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -10,14 +11,15 @@ public class prueba1 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Path ruta = Paths.get(System.getProperty("user.home"),"Desktop", "MODULO", "PROYECTOS JAVA" );
+		Path ruta = Paths.get(System.getProperty("user.home"),"Desktop", "MODULO", "PROYECTOS JAVA", "archivosTXT" );
+		File file = new File("datosProductos.txt");
 		if (Files.exists(ruta)) {
 			System.out.println("contenido de la ruta : " + ruta.toAbsolutePath());
 			System.out.println("*************************");
 			try {
 				DirectoryStream<Path> directoryStream = Files.newDirectoryStream(ruta);
 				for (Path path : directoryStream) {
-					if(Files.isDirectory(path)) {
+					if(file.getName().equalsIgnoreCase("datosProductos.txt")) {
 						System.out.println(" Directorio: " + path); 
 					}
 						else {
