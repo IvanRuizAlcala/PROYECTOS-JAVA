@@ -20,11 +20,9 @@ public class GestionFicheroDat {
 		System.out.println(" archivo abierto");
 	}
 
-	public void insertarDatos(ArrayList<Alumno> alumnos) throws IOException {
+	public void insertarDatos() throws IOException {
 		ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-		for (Alumno alumno : alumnos) {
-			objectOut.writeObject(alumno);
-		}
+		objectOut.writeObject(" ");
 		objectOut.close();
 		System.out.println(" datos insertados");
 	}
@@ -36,5 +34,4 @@ public class GestionFicheroDat {
 	}
 
 }
-
 
