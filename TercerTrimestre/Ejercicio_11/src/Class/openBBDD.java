@@ -18,7 +18,7 @@ public class openBBDD {
 		this.nombreArchivo = nombreArchivo;
 	}
 	public void abrirArchivo() throws FileNotFoundException, IOException {
-		Path ruta = Paths.get(System.getProperty("user.home"),"Desktop", "MODULO", "PROYECTOS JAVA", "archivosTXT",nombreArchivo);
+		Path ruta = Paths.get(System.getProperty("user.home"),"Desktop", "Modulo", "PROYECTOS JAVA","TercerTrimestre", "archivosTXT",nombreArchivo);
 		File file = ruta.toFile();
 		bufferEntrada = new BufferedReader(new FileReader(file));
 		System.out.println(" archivo abierto");
