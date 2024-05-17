@@ -22,8 +22,8 @@ public class GestionFicheroDat {
 
 	public void insertarDatos(ArrayList<Empleado> empleados) throws IOException {
 		ObjectOutputStream objectOut = new ObjectOutputStream(fileOut);
-		for (Empleado alumno : empleados) {
-			objectOut.writeObject(alumno);
+		for (Empleado empleado2 : empleados) {
+			objectOut.writeObject(empleado2);
 		}
 		objectOut.close();
 		System.out.println(" datos insertados");

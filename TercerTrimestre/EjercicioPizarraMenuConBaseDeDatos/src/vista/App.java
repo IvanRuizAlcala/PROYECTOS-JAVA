@@ -1,5 +1,6 @@
 package vista;
 
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,6 +8,7 @@ import java.util.Scanner;
 import control.GestionDepartamentos;
 import model.Empleado;
 import model.GestionFicheroDat;
+import model.GestionFicheroEmpleadosTXT;
 
 public class App {
 
@@ -95,15 +97,44 @@ public class App {
 			}
 				break;
 			case 5: {
-				
+			try {
+				boolean agregarEmpleadosAarchivoDat = GestionDepartamentos.agregarEmpleadosAarchivoDat();
+				if(agregarEmpleadosAarchivoDat==true) {
+					System.out.println("archivo creado correctamente");
+				}
+				else{
+					
+					System.out.println("el archivo ha fallado");
+				}
+			} catch (SQLException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			}
 				break;
-			default:
-				break;
+			case 6: {
+			try {
+				boolean agregarNombreDepartamentosTXT = GestionDepartamentos.agregarNombreDepartamentosTXT();
+				if(agregarNombreDepartamentosTXT==true) {
+					System.out.println("archivo creado correctamente");
+				}
+				else{
+					System.out.println("el archivo ha fallado");
+				}
+					} catch (SQLException | IOException e) {
+						e.getMessage();
+					}
+			key=0;
+			break;
+					}
+			default:{
+				salir=key;
+			}
+			break;
 			}
 		}
 		while (key!=salir);
-
+		System.out.println("has terminado");
 	}
 	public static void crearMenu() {
 		System.out.println("menu de Opciones sobre la base de datos Departamentos");
@@ -111,6 +142,9 @@ public class App {
 		System.out.println("2. insertar un empleado en el departamento 1");
 		System.out.println("3. Eliminar un empleado ");
 		System.out.println("4. modificar el salario de un empleado ");
+		System.out.println("5. guardar empleados en .dat ");
+		System.out.println("6. guarda el nombre de los departamentos en .txt ");
+		System.out.println("7. pulsa cualquier numero para salir ");
 		System.out.println(" elije una opcion : ");
 	}
 
