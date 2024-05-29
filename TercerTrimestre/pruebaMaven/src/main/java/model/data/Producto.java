@@ -3,21 +3,26 @@ package model.data;
 public class Producto {
 private String Codigo;
 private String Nombre;
-private String Categoria;
+private String vendedor;
 private String Pventa;
-private String Pcompra;
-public Producto(String codigo, String nombre, String categoria, String pventa, String pcompra) {
+
+
+public Producto(String codigo, String nombre, String vendedor, String pventa) {
 	super();
 	Codigo = codigo;
 	Nombre = nombre;
-	Categoria = categoria;
+	this.vendedor = vendedor;
 	Pventa = pventa;
-	Pcompra = pcompra;
 }
 @Override
 public String toString() {
-	return "Producto [Codigo=" + Codigo + ", Nombre=" + Nombre + ", Categoria=" + Categoria + ", Pventa=" + Pventa
-			+ ", Pcompra=" + Pcompra + "]";
+	return "Producto [Codigo=" + Codigo + ", Nombre=" + Nombre + ", vendedor=" + vendedor + ", Pventa=" + Pventa + "]";
+}
+public String getVendedor() {
+	return vendedor;
+}
+public void setVendedor(String vendedor) {
+	this.vendedor = vendedor;
 }
 public String getCodigo() {
 	return Codigo;
@@ -31,22 +36,11 @@ public String getNombre() {
 public void setNombre(String nombre) {
 	Nombre = nombre;
 }
-public String getCategoria() {
-	return Categoria;
-}
-public void setCategoria(String categoria) {
-	Categoria = categoria;
-}
+
 public String getPventa() {
 	return Pventa;
 }
 public void setPventa(String pventa) {
 	Pventa = pventa;
-}
-public String getPcompra() {
-	return Pcompra;
-}
-public void setPcompra(String pcompra) {
-	Pcompra = pcompra;
 }
 }

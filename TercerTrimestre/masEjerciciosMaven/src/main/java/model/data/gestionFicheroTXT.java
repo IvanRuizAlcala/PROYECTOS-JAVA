@@ -8,6 +8,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.stream.Stream;
+
+import control.Usuario;
+
 import java.io.BufferedWriter;
 
 public class gestionFicheroTXT {
@@ -25,10 +28,12 @@ public class gestionFicheroTXT {
 		System.out.println(" archivo abierto");
 	}
 
-	public boolean insertarDatos(ArrayList<String>archivoCompleto) throws IOException {
+	public boolean insertarDatos(ArrayList<Usuario>archivoCompleto) throws IOException {
 		boolean control = false;
-		for (String string : archivoCompleto) {
-			bufferEntrada.write(string);
+		for (Usuario string : archivoCompleto) {
+			bufferEntrada.write(string.getUserName());
+			bufferEntrada.write(string.getPassword());
+			bufferEntrada.write(string.getUserType());
 			bufferEntrada.newLine();
 		}
 		System.out.println(" datos insertados");
@@ -43,5 +48,5 @@ public class gestionFicheroTXT {
 		System.out.println(" archivo cerrado");
 		
 	}
-
+	
 }
